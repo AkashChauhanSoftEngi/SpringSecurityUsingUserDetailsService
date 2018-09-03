@@ -23,3 +23,10 @@
 * http://localhost:8080/SpringSecurityUsingHibernate/admin
 
 > **###4. Important things to keep in mind**
+* While using overloaded configure method we need to use 
+  - AuthenticationManagerBuilder.userDetailsService(Custom UserDetailsService);
+  - For this, we need to implement UserDetailsService interface and populate our custom data into user using UserDetails interface
+  - Later jsp, will communicate through filter using user class[POJO]
+  - So the authentication will be done by this way
+* In this project, custom login form is being used instead of default spring security login form
+
